@@ -1,0 +1,428 @@
+/* Darius Sarlat 200608715 George Baxter 200582531*/
+
+
+/* GLOBAL HEADER AND FOOTER + SMALL DEVICE CSS-------------------------------------------------------------------------- */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    width: 100%; /* Ensure the header spans the full width */
+}
+
+
+header {
+    display: flex;
+    justify-content: space-evenly; /* Align items to the left and right */
+    align-items: center;
+    flex-direction: column;
+
+}
+header nav a {
+    color: white;
+    font-weight: bold;
+    background: darkred; /* Set background color to dark red */
+    padding: 10px 15px; /* Add padding to make it look like a button */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 2px 2px 10px black; /* Add shadow for depth */
+}
+
+header nav a:hover {
+    background: darkblue; /* Change background color on hover */
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+
+    header nav a {
+        margin: 10px 0; /* Add margin between items */
+    }
+
+    header nav a {
+        padding: 10px 20px; /* Increase padding for better touch targets */
+    }
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        padding: 8px 15px; /* Adjust padding for very small screens */
+        font-size: 0.9rem; /* Adjust font size for better readability */
+    }
+}
+/* Ensure the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should take all available space */
+main {
+    flex: 1;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    width: 100%; /* Ensure the footer spans the full width */
+    text-align: center; /* Center the text */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background: darkred; /* Set background color to dark red */
+    padding: 10px 15px; /* Add padding to make it look like a button */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 2px 2px 10px black; /* Add shadow for depth */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+    color: darkred;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 0;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    footer a {
+        margin: 0 3px;
+    }
+}
+
+/*  CSS FOR THE WHOLE HOMEPAGE/INDEX----------------------------------------------------------------------------------- */
+
+body.homepage {
+    margin: 0;
+    padding: 0;
+    background: url('images/spidermanbghomepage.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center; /* Center the bottem 3 buttons into the middle */
+    height: 100vh; /*viewport height */
+}
+
+/* Buttons container for homepage */
+.buttons {
+    margin-top: auto; /*  buttons at bottom of the screen */
+    margin-bottom: 20px; /* a little room from the bottem */
+}
+
+/* SHOP BUTTON */
+.buttons .button1 {
+    text-decoration: none;
+    color: white;
+    background: darkred;
+    padding: 15px 25px;
+    border-radius: 5px; /* gives rounded edges that look clean imo */
+    margin: 0 10px; /* spacing between buttons */
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px black;
+    transition: background 0.3s ease;
+}
+
+.buttons .button1:hover {
+    background: darkblue;
+}
+
+/* contact us button */
+.buttons .button2 {
+    text-decoration: none;
+    color: white;
+    background: darkred;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 19px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px black;
+    transition: background 0.3s ease;
+}
+
+.buttons .button2:hover {
+    background: darkblue;
+}
+
+/* ABOUT COMAPNY BUTTON */
+.buttons .button3 {
+    text-decoration: none;
+    color: white;
+    background: darkred;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px black;
+    transition: background 0.3s ease;
+}
+
+.buttons .button3:hover {
+    background: darkblue;
+}
+
+/* YouTube video container */
+.video {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%); /* adjust the video upwards
+    border: 3px solid white;
+    border-radius: 10px; /* rounded edges aswell */
+    width: 80%;
+    max-width: 600px;
+    height: auto; /* keeping height flexible */
+}
+
+/* Resizing video for multiple devices */
+@media (max-width: 768px) {
+    .video {
+        width: 90%; /* Increase width on smaller screens */
+        right: 5%; /* Adjust position */
+    }
+}
+
+@media (max-width: 480px) {
+    .video {
+        width: 95%; /* Further increase width on very small screens */
+        right: 2.5%; /* Adjust position */
+    }
+}
+
+/* CONTACT US PAGE WHOLE CSS-------------------------------------------------------------------------------------------- */
+body.ContactUs {
+    background: url('images/Contactusbg.jpg') no-repeat center center fixed;
+    font-family: Arial, sans-serif;
+    background-size: cover; /* covers whole body */
+}
+
+/* Contact info container */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px; /* sticking with the rounded edges theme */
+}
+
+/* Heading styles for the Contact Us page */
+h1, h2 {
+    color: darkred;
+    text-align: center;
+}
+
+/* Styling for contact info lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: bold;
+}
+
+a:hover {
+    color: crimson;
+}
+
+/* Back button styling */
+.back-button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Space above the button */
+}
+
+.back-button {
+    text-decoration: none; /* no underline */
+    color: white;
+    background-color: darkred;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px black;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: darkblue;
+}
+
+/* ABOUT COMPANY WHOLE CSS STYLING-------------------------------------------------------------------------------------- */
+.about-container {
+    background: url('images/bgforABOUTCOM.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    height: 100vh;
+    /* center content both horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading styles for the About page */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Unordered List for about page */
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Back button styling for About page */
+.back-button-container {
+    position: absolute;
+    bottom: 30px; /* Position button near the bottom of the page */
+    left: 87%;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+.back-button {
+    text-decoration: none;
+    color: white;
+    background-color: darkred;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px black;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: darkblue;
+}
+
+/* SHOP PAGE HERE!!!---------------------------------------------------------------------------------------------------- */
+
+/* Body styling for the shop page */
+body.shop {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: darkgray;
+    text-align: center; /* Center the text */
+    background: url('images/SpidermanShopbg.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Welcome message styling */
+h1 {
+    margin-top: 5px; /* Space from the top of the page */
+    color: darkred;
+}
+
+p {
+    margin-bottom: 20px; /* Space below the paragraph */
+    color : darkred;
+}
+
+/* Container for the comic images */
+.comic-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centering horizantaly */
+    margin-top: 20px;
+}
+
+.comic {
+    display: flex;
+    flex-direction: column; /* Stack image and button vertically within each comic */
+    align-items: center;
+    margin: 40px;
+}
+
+/* Button styling for learn more and buy now buttons */
+.comic .button1,
+.comic .button2,
+.comic .button3 {
+    text-decoration: none;
+    color: white;
+    background: darkred;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px black;
+    transition: background 0.3s ease;
+    max-width: 100px; /* Prevent buttons from stretching */
+    width: 100%;
+    text-align: center; /* Center the text */
+}
+
+.comic .button1:hover,
+.comic .button2:hover,
+.comic .button3:hover {
+    background: darkblue;
+}
+
+/* Add a border to the comic images and set a fixed size */
+.comic img {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 200px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    top: 250px;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
